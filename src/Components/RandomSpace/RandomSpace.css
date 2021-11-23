@@ -1,0 +1,10 @@
+.RandomSpace {
+    padding: 5%;
+    border-radius: 250px;
+    margin: 2.5%;
+    background-color: white;
+    box-shadow: 5px gray;
+    /* color: white; */
+    font-weight: 900;
+    border: none;
+}

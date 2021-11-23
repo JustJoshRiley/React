@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
-import App from './App';
+import App from './App/App.js';
+import About from './Components/About/About';
+import POPOSList from './Components/POPOSList/POPOSList.js';
+import POPOSDetails from './Components/POPOSDetails/POPOSDetails.js';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route path="/" element={<POPOSList />} />
+        <Route path="about" element={<About />} />
+        <Route path="details/:id" element={<POPOSDetails />} />
+      </Route>
+    </Routes>
+  </Router>,
   document.getElementById('root')
 );
 
